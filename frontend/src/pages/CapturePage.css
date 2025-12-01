@@ -1,0 +1,126 @@
+.capture-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.capture-layout {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .capture-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.capture-form-section {
+  position: sticky;
+  top: calc(60px + var(--spacing-xl));
+}
+
+.capture-result-section {
+  min-height: 400px;
+}
+
+/* Progress indicator */
+.capture-progress {
+  text-align: center;
+  padding: var(--spacing-2xl);
+}
+
+.progress-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.progress-content .spinner {
+  width: 48px;
+  height: 48px;
+  border-width: 3px;
+}
+
+.progress-text h3 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xl);
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.progress-step.active {
+  color: var(--color-accent-primary);
+}
+
+.progress-step.active .step-icon {
+  background: var(--color-accent-primary);
+  color: var(--color-bg-primary);
+}
+
+.step-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--color-bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Info section */
+.capture-info h3 {
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.125rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+@media (max-width: 700px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-item {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.info-content h4 {
+  font-size: 0.9375rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-primary);
+}
+
+.info-content p {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
